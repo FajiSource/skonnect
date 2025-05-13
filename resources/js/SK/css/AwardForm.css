@@ -1,0 +1,436 @@
+/* AwardForm.css */
+.sk-award-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 1rem;
+}
+
+.sk-award-form-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: skAwardFormFadeIn 0.3s ease;
+}
+
+@keyframes skAwardFormFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sk-award-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sk-award-form-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sk-award-form-icon {
+  color: var(--sk-cmn-sklcss-primary);
+  font-size: 1.5rem;
+}
+
+.sk-award-form-title h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sk-award-form-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.sk-award-form-close:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.sk-award-form {
+  width: 100%;
+}
+
+.sk-award-form-body {
+  padding: 1.5rem;
+}
+
+.sk-award-form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.sk-award-form-group {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1.25rem;
+}
+
+.sk-award-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.sk-award-form-input,
+.sk-award-form-select,
+.sk-award-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.sk-award-form-input:focus,
+.sk-award-form-select:focus,
+.sk-award-form-textarea:focus {
+  outline: none;
+  border-color: var(--sk-cmn-sklcss-primary);
+  box-shadow: 0 0 0 2px rgba(36, 86, 166, 0.15);
+}
+
+.sk-award-form-input-error {
+  border-color: #e74c3c;
+}
+
+.sk-award-form-input-error:focus {
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15);
+}
+
+.sk-award-form-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.sk-award-form-help {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.sk-award-form-file-container {
+  margin-top: 0.5rem;
+}
+
+.sk-award-form-file {
+  margin-bottom: 1rem;
+}
+
+.sk-award-form-image-preview {
+  margin-top: 1rem;
+  max-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sk-award-form-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sk-award-form-gallery-section {
+  margin-top: 2rem;
+  border-top: 1px solid #eaeaea;
+  padding-top: 2rem;
+}
+
+.sk-award-form-gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sk-award-form-gallery-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sk-award-form-gallery-add-btn:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.sk-award-form-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sk-award-form-gallery-item {
+  background-color: #f9fafb;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.sk-award-form-gallery-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sk-award-form-gallery-preview {
+  position: relative;
+  height: 150px;
+}
+
+.sk-award-form-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sk-award-form-gallery-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(231, 76, 60, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sk-award-form-gallery-remove:hover {
+  background-color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.sk-award-form-gallery-inputs {
+  padding: 1rem;
+}
+
+.sk-award-form-gallery-caption {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.sk-award-form-gallery-subcaption {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.sk-award-form-gallery-empty {
+  background-color: #f9fafb;
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.sk-award-form-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.sk-award-form-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.sk-award-form-btn-cancel {
+  background-color: #f1f3f5;
+  color: #495057;
+}
+
+.sk-award-form-btn-cancel:hover {
+  background-color: #e9ecef;
+}
+
+.sk-award-form-btn-save {
+  background: var(--sk-cmn-sklcss-primary);
+  color: white;
+}
+
+.sk-award-form-btn-save:hover {
+  background: #1a4080;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(36, 86, 166, 0.2);
+}
+
+@media (max-width: 768px) {
+  .sk-award-form-overlay {
+    padding: 0.5rem;
+  }
+  
+  .sk-award-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .sk-award-form-group {
+    min-width: 100%;
+  }
+  
+  .sk-award-form-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sk-award-form-footer {
+    flex-direction: column-reverse;
+  }
+  
+  .sk-award-form-btn {
+    width: 100%;
+  }
+}
+
+/* Add these styles to AwardForm.css */
+
+.sk-award-form-file-actions {
+display: flex;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.sk-award-form-file-upload {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.6rem 1.2rem;
+background-color: var(--sk-cmn-sklcss-primary);
+color: white;
+border-radius: 5px;
+font-size: 0.9rem;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.sk-award-form-file-upload:hover {
+background-color: #1a4080;
+transform: translateY(-2px);
+box-shadow: 0 3px 8px rgba(36, 86, 166, 0.2);
+}
+
+.sk-award-form-file-remove {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.6rem 1.2rem;
+background-color: #ffebee;
+color: #d32f2f;
+border: 1px solid #ffcdd2;
+border-radius: 5px;
+font-size: 0.9rem;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.sk-award-form-file-remove:hover {
+background-color: #ffcdd2;
+transform: translateY(-2px);
+box-shadow: 0 3px 8px rgba(211, 47, 47, 0.2);
+}
+
+.sk-award-form-removed-message {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+background-color: #fff3cd;
+border: 1px solid #ffeeba;
+color: #856404;
+padding: 0.75rem 1rem;
+border-radius: 5px;
+margin-top: 0.5rem;
+font-size: 0.9rem;
+}
+
+.sk-award-form-gallery-add-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.6rem 1.2rem;
+background-color: var(--sk-cmn-sklcss-primary);
+color: white;
+border-radius: 5px;
+font-size: 0.9rem;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.sk-award-form-gallery-add-btn:hover {
+background-color: #1a4080;
+transform: translateY(-2px);
+box-shadow: 0 3px 8px rgba(36, 86, 166, 0.2);
+}
